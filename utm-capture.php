@@ -2,6 +2,7 @@
 
 /*
 	Plugin Name: UTM Capture
+	Plugin URI: https://github.com/rjmccollam/utm-capture
 	Description: Capture UTM parameters from marketing campaigns and use them to pass along information to specific Gravity Forms fields.
 	Version: 1.0
 	Author: RJ McCollam
