@@ -4,7 +4,7 @@
 	Plugin Name: UTM Capture
 	Plugin URI: https://github.com/rjmccollam/utm-capture
 	Description: Capture UTM parameters from marketing campaigns and use them to pass along information to specific Gravity Forms fields.
-	Version: 1.0
+	Version: 1.0.1
 	Author: RJ McCollam
 	Author URI: https://rjmccollam.com/
 	License: GPLv2 or later
@@ -15,11 +15,11 @@
 		if ( !is_admin() ) {
 
 			// Get UTM parameters from URL
-			$source = $_GET['utm_source'];
-			$medium = $_GET['utm_medium'];
-			$term = $_GET['utm_term'];
-			$content = $_GET['utm_content'];
-			$campaign = $_GET['utm_campaign'];
+			$source = isset($_GET['utm_source']) ? $_GET['utm_source'] : null;
+			$medium = isset($_GET['utm_medium']) ? $_GET['utm_medium'] : null;
+			$term = isset($_GET['utm_term']) ? $_GET['utm_term'] : null;
+			$content = isset($_GET['utm_content']) ? $_GET['utm_content'] : null;
+			$campaign = isset($_GET['utm_campaign']) ? $_GET['utm_campaign'] : null;
 
 			// If source parameter exists and the cookie has not already been set process all cookies
 			if ( $source && !isset($_COOKIE['utm_source']) ) {
