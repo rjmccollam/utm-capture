@@ -40,50 +40,60 @@
 
 	// Source field
 	function populate_utm_source( $value ) {
-		if (!isset($_COOKIE['utm_source'])) {
+		if (empty($_COOKIE['utm_source']) && empty($_GET['utm_source'])) {
 			return false;
 		}
 
-		return $_COOKIE['utm_source'];
+		$source = isset($_GET['utm_source']) ? $_GET['utm_source'] : $_COOKIE['utm_source'];
+
+		return $source;
 	}
 	add_filter( 'gform_field_value_utm_source', 'populate_utm_source' );
 
 	// Medium field
 	function populate_utm_medium( $value ) {
-		if (!isset($_COOKIE['utm_medium'])) {
+		if (empty($_COOKIE['utm_medium']) && empty($_GET['utm_medium'])) {
 			return false;
 		}
 
-		return $_COOKIE['utm_medium'];
+		$medium = isset($_GET['utm_medium']) ? $_GET['utm_medium'] : $_COOKIE['utm_medium'];
+
+		return $medium;
 	}
 	add_filter( 'gform_field_value_utm_medium', 'populate_utm_medium' );
 
 	// Term field
 	function populate_utm_term( $value ) {
-		if (!isset($_COOKIE['utm_term'])) {
+		if (empty($_COOKIE['utm_term']) && empty($_GET['utm_term'])) {
 			return false;
 		}
 
-		return $_COOKIE['utm_term'];
+		$term = isset($_GET['utm_term']) ? $_GET['utm_term'] : $_COOKIE['utm_term'];
+
+		return $term;
 	}
 	add_filter( 'gform_field_value_utm_term', 'populate_utm_term' );
 
 	// Content field
 	function populate_utm_content( $value ) {
-		if (!isset($_COOKIE['utm_content'])) {
+		if (empty($_COOKIE['utm_content']) && empty($_GET['utm_content'])) {
 			return false;
 		}
 
-		return $_COOKIE['utm_content'];
+		$content = isset($_GET['utm_content']) ? $_GET['utm_content'] : $_COOKIE['utm_content'];
+
+		return $content;
 	}
 	add_filter( 'gform_field_value_utm_content', 'populate_utm_content' );
 
 	// Campaign field
 	function populate_utm_campaign( $value ) {
-		if (!isset($_COOKIE['utm_campaign'])) {
+		if (empty($_COOKIE['utm_campaign']) && empty($_GET['utm_campaign'])) {
 			return false;
 		}
 
-		return $_COOKIE['utm_campaign'];
+		$campaign = isset($_GET['utm_campaign']) ? $_GET['utm_campaign'] : $_COOKIE['utm_campaign'];
+
+		return $campaign;
 	}
 	add_filter( 'gform_field_value_utm_campaign', 'populate_utm_campaign' );
