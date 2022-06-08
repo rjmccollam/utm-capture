@@ -23,6 +23,12 @@ On page load where parameters exist check first to see if cookie for `utm_source
 - `utm_content`
 - `utm_campaign`
 
+### Additional Fields Supports
+
+While cookies may not be set for these fields they are available for field population so they can be captured.
+
+- `referer` - Grabs the referring domain if it is available.
+
 ### Populating Gravity Form Fields
 
 If a form contains fields with the properly named parameters and the user has the cookies — populate the form fields with cookie values.
