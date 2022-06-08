@@ -1,5 +1,7 @@
 # UTM Capture
 
+Current version - 1.1.0
+
 ## Overview
 
 Create a system to capture PPC campaign parameters from the URL from the first page a user visits, then pass that data to the Gravity Form entry on a subsequent page.
