@@ -97,3 +97,13 @@
 		return $campaign;
 	}
 	add_filter( 'gform_field_value_utm_campaign', 'populate_utm_campaign' );
+
+	// Referer field
+	function populate_referer( $value ) {
+		if (empty($_SERVER['HTTP_REFERER'])) {
+			return false;
+		}
+
+		return $_SERVER['HTTP_REFERER'];
+	}
+	add_filter( 'gform_field_value_referer', 'populate_referer' );
